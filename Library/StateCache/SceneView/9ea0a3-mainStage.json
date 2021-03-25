@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":11.001363754272461,"y":1.2128428220748902,"z":11.100502967834473},"rotation":{"x":-0.020198261365294458,"y":-0.976948618888855,"z":0.10771263390779495,"w":-0.18322469294071198},"size":0.3073950409889221,"orthographic":false}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":31.16054916381836,"y":-10.720733642578125,"z":21.70316505432129},"rotation":{"x":-0.33830395340919497,"y":-0.348524808883667,"z":0.13770344853401185,"w":-0.8634786009788513},"size":10.0,"orthographic":false}
+>>>>>>> 89eea58 (Recoil)
