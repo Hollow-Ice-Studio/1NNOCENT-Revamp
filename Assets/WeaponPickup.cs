@@ -1,19 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class WeaponPickup : MonoBehaviour
-{
-    public RaycastWeapon weaponFab;
-
-    private void OnTriggerEnter(Collider other)
-    {
-        ActiveWeapon activeWeapon = other.gameObject.GetComponent<ActiveWeapon>();
-        if (activeWeapon)
-        {
-            RaycastWeapon newWeapon = Instantiate(weaponFab);
-            activeWeapon.Equip(newWeapon);
-        }
-    }
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5fc6833702db117bf50c798a7db5d1020a873157441cdd0d8da1d161fe68f23c
+size 480

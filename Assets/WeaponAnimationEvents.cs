@@ -1,18 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Events;
-
-public class AnimationEvent : UnityEvent<string>
-{
-
-}
-public class WeaponAnimationEvents : MonoBehaviour
-{
-    public AnimationEvent WeaponAnimationEvent = new AnimationEvent();
-    public void OnAnimationEvent(string eventName)
-    {
-        WeaponAnimationEvent.Invoke(eventName);
-        Debug.Log(eventName);
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f4e3ebe51f96fed61af0c95e8d11e892b48d823ac0bdea4220624a8d963f0806
+size 448

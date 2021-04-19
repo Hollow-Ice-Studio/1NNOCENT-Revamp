@@ -1,26 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class CrosshairTarget : MonoBehaviour
-{
-    public Camera mainCamera;
-    Ray ray;
-    RaycastHit hitInfo;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        ray.origin = mainCamera.transform.position;
-        ray.direction = mainCamera.transform.forward;
-        Physics.Raycast(ray, out hitInfo);
-        transform.position = hitInfo.point;
-        
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3f8f006e8caf3862564e4fc13dc10e33a9a16f323be5f04422be3cc64416839e
+size 589
