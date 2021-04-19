@@ -2,6 +2,8 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
+    <CscToolPath>C:\Program Files\Unity\Hub\Editor\2019.3.15f1\Editor\Data\Tools\RoslynScripts</CscToolPath>
+    <CscToolExe>unity_csc.bat</CscToolExe>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -9,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{5373A57C-2C59-10B2-2B95-F11EE06491B5}</ProjectGuid>
+    <ProjectGuid>{5DF3E4BF-CCE1-D5DD-6BD7-0DC782C4F4D7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -52,9 +54,6 @@
     <UnityVersion>2019.3.15f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
-  </ItemGroup>
-  <ItemGroup>
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2019.3.15f1\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -95,14 +94,82 @@
     <Compile Include="Assets\Samples\Cinemachine\2.7.2\Cinemachine Example Scenes\Shared\Scripts\SimpleElevator.cs" />
     <Compile Include="Assets\Samples\Cinemachine\2.7.2\Cinemachine Example Scenes\Shared\Scripts\SpawnInCircle.cs" />
     <Compile Include="Assets\Samples\Cinemachine\2.7.2\Cinemachine Example Scenes\Shared\Scripts\ThirdPersonFollowDistanceModifier.cs" />
+    <Compile Include="Assets\Scenes\AutoSceneSkip.cs" />
+    <Compile Include="Assets\Scenes\SceneChanger.cs" />
     <Compile Include="Assets\Unity\ConstraintSamples\Scripts\mParent.cs" />
     <Compile Include="Assets\Unity\Info\Scripts\Readme.cs" />
     <Compile Include="Assets\WeaponAnimationEvents.cs" />
     <Compile Include="Assets\WeaponPickup.cs" />
     <Compile Include="Assets\WeaponRecoil.cs" />
+    <Compile Include="Assets\[Adam]\Prefabs\Adam morrendo\ResetScene.cs" />
+    <Compile Include="Assets\[Adam]\Scripts\Adam.cs" />
+    <Compile Include="Assets\[Adam]\Scripts\AdamAnimationController.cs" />
+    <Compile Include="Assets\[Adam]\Scripts\AdamGroundMovementController.cs" />
+    <Compile Include="Assets\[Adam]\Scripts\AdamJumpController.cs" />
+    <Compile Include="Assets\[Adam]\Scripts\BehavioursTriggeredByAnimation.cs" />
+    <Compile Include="Assets\[Adam]\Scripts\Player.cs" />
+    <Compile Include="Assets\[Adam]\Scripts\ThirdPersonAnimationController.cs" />
+    <Compile Include="Assets\[Adam]\Scripts\ThirdPersonCameraController.cs" />
+    <Compile Include="Assets\[Adam]\Scripts\ThirdPersonDamageController.cs" />
+    <Compile Include="Assets\[Fase 1] Arena e Labirintos\Blocagem\Animator e afins\Fechamento do portao da arena inicial\PortoesArenaActivador.cs" />
+    <Compile Include="Assets\[Fase 1] Arena e Labirintos\Blocagem\Animator e afins\Paredes que se elevam no labirinto longo\AudioManagerPlayer.cs" />
+    <Compile Include="Assets\[Fase 1] Arena e Labirintos\Blocagem\Animator e afins\Paredes que se elevam no labirinto longo\Paredes_Corredor.cs" />
+    <Compile Include="Assets\[Fase 1] Arena e Labirintos\Blocagem\Animator e afins\Paredes que se elevam no labirinto longo\Portas_Corredor.cs" />
+    <Compile Include="Assets\[Fase 1] Arena e Labirintos\Blocagem\Armadilha de espinho\DetectorEspinhos.cs" />
+    <Compile Include="Assets\[Fase 1] Arena e Labirintos\CutSceneDetector.cs" />
+    <Compile Include="Assets\[Fase 1] Arena e Labirintos\Mecânica Arena Inicial\Bullet.cs" />
+    <Compile Include="Assets\[Fase 1] Arena e Labirintos\Mecânica Arena Inicial\DetectionZone.cs" />
+    <Compile Include="Assets\[Fase 1] Arena e Labirintos\Mecânica Arena Inicial\Detector.cs" />
+    <Compile Include="Assets\[Fase 1] Arena e Labirintos\Mecânica Arena Inicial\Enemy Spawner\Scripts\EnemySpawner.cs" />
+    <Compile Include="Assets\[Fase 1] Arena e Labirintos\Mecânica Arena Inicial\Enemy Stalker\EnemyWeaponAtHand.cs" />
+    <Compile Include="Assets\[Fase 1] Arena e Labirintos\Mecânica Arena Inicial\Enemy Stalker\Scripts\EnemyStalker.cs" />
+    <Compile Include="Assets\[Fase 1] Arena e Labirintos\Mecânica Arena Inicial\Enemy Stalker\Scripts\NavMeshAI.cs" />
+    <Compile Include="Assets\[Fase 1] Arena e Labirintos\Mecânica Arena Inicial\EnemyStalkerAnimatorStateSwitcher.cs" />
+    <Compile Include="Assets\[Fase 1] Arena e Labirintos\Mecânica Arena Inicial\GunBehaviour.cs" />
+    <Compile Include="Assets\[Fase 1] Arena e Labirintos\Mecânica Arena Inicial\MapSection.cs" />
+    <Compile Include="Assets\[Fase 1] Arena e Labirintos\Mecânica Arena Inicial\Perseguidor\EnemyIA.cs" />
+    <Compile Include="Assets\[Fase 1] Arena e Labirintos\Mecânica Arena Inicial\Scripts\ArenaCollider.cs" />
+    <Compile Include="Assets\[Fase 1] Arena e Labirintos\Mecânica Arena Inicial\Weapon\EnemyGun.cs" />
+    <Compile Include="Assets\[Fase 1] Arena e Labirintos\Mecânica Arena Inicial\Weapon\IWeapon.cs" />
+    <Compile Include="Assets\[Fase 1] Arena e Labirintos\Mecânica Arena Inicial\Weapon\Weapon.cs" />
+    <Compile Include="Assets\[Fase 1] Arena e Labirintos\Sound Design\Audios\Historia\Scripts\PlayAudioManagerSound.cs" />
+    <Compile Include="Assets\[Fase 1] Arena e Labirintos\Sound Design\Audios\Historia\Scripts\PlaySound1.cs" />
+    <Compile Include="Assets\[Fase 1] Arena e Labirintos\Sound Design\Audios\Historia\Scripts\PlaySound2.cs" />
+    <Compile Include="Assets\[Fase 1] Arena e Labirintos\Sound Design\Audios\Historia\Scripts\PlaySound3.cs" />
+    <Compile Include="Assets\[Fase 1] Arena e Labirintos\Sound Design\Audios\Historia\Scripts\PlaySound4.cs" />
+    <Compile Include="Assets\[Fase 1] Arena e Labirintos\Sound Design\Audios\Historia\Scripts\PlaySound5.cs" />
+    <Compile Include="Assets\[Fase 1] Arena e Labirintos\Sound Design\Audios\Historia\Scripts\PlaySound5B.cs" />
+    <Compile Include="Assets\[Fase 1] Arena e Labirintos\Sound Design\Scripts\AudioManager.cs" />
+    <Compile Include="Assets\[Fase 1] Arena e Labirintos\Sound Design\Scripts\AudioTrigger.cs" />
+    <Compile Include="Assets\[Fase 1] Arena e Labirintos\Sound Design\Scripts\Sound.cs" />
+    <Compile Include="Assets\[Fase 1] Arena e Labirintos\Sound Design\Scripts\SoundOnCollision.cs" />
+    <Compile Include="Assets\[Fase 1] Arena e Labirintos\Torreta\DestroyOnCollision.cs" />
+    <Compile Include="Assets\[Fase 1] Arena e Labirintos\Torreta\TimedAutoDestruction.cs" />
+    <Compile Include="Assets\[Fase 1] Arena e Labirintos\Torreta\TurretBehaviour.cs" />
+    <Compile Include="Assets\[Frameworks]\Notifications\Notification.cs" />
+    <Compile Include="Assets\[Frameworks]\Notifications\NotificationCenter.cs" />
+    <Compile Include="Assets\[Frameworks]\Notifications\NotificationExtensions.cs" />
+    <Compile Include="Assets\[Game Controller]\PauseMenuController.cs" />
+    <Compile Include="Assets\[Game Controller]\Scripts\ConfiguredButtonNames.cs" />
+    <Compile Include="Assets\[Game Controller]\Scripts\ConfiguredLayers.cs" />
+    <Compile Include="Assets\[Game Controller]\Scripts\ConfiguredTags.cs" />
+    <Compile Include="Assets\[Game Controller]\Scripts\DynamicAssets.cs" />
+    <Compile Include="Assets\[Game Controller]\Scripts\GameSystem.cs" />
+    <Compile Include="Assets\[Game Controller]\Scripts\GameSystemInstantiationException.cs" />
+    <Compile Include="Assets\[Game Controller]\Scripts\GameSystems\AudioSystem.cs" />
+    <Compile Include="Assets\[Game Controller]\Scripts\GameSystems\CharacterAnimationSystem.cs" />
+    <Compile Include="Assets\[Game Controller]\Scripts\GameSystems\CutSceneSystem.cs" />
+    <Compile Include="Assets\[Game Controller]\Scripts\GameSystems\HudDamageSystem.cs" />
+    <Compile Include="Assets\[Game Controller]\Scripts\GameSystems\HudInsanitySystem.cs" />
+    <Compile Include="Assets\[Game Controller]\Scripts\GameSystems\HudTextSystem.cs" />
+    <Compile Include="Assets\[Game Controller]\Scripts\GameSystems\VictoryConditionSystem.cs" />
+    <Compile Include="Assets\[Game Controller]\Scripts\LogExtensions.cs" />
+    <None Include="Assets\Terrain Tools 0.1.0-preview\Terrain Assets\ThirdPartyNotices.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\[Game Controller]\HUD\MaskedUIBlur.shader" />
+    <None Include="Assets\[Game Controller]\HUD\FrostedGlass.shader" />
     <None Include="Assets\Samples\Cinemachine\2.7.2\Cinemachine Example Scenes\Scenes\FadeOutNearbyObjects\FadeOut.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
@@ -117,6 +184,7 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\Scenes\3. Cena de transição\EmissiveUI.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
@@ -304,10 +372,10 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.15f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Unsafe">
-      <HintPath>J:/GitHub/1NNOCENT Revamp/Library/PackageCache/com.unity.burst@1.1.1/Unity.Burst.Unsafe.dll</HintPath>
+      <HintPath>C:/Users/Germano/Documents/[UNITY PROJECTS]/1NNOCENT-Revamp/Library/PackageCache/com.unity.burst@1.1.1/Unity.Burst.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="clipper_library">
-      <HintPath>J:/GitHub/1NNOCENT Revamp/Library/PackageCache/com.unity.cinemachine@2.7.2/Runtime/ThirdParty/clipper_library.dll</HintPath>
+      <HintPath>C:/Users/Germano/Documents/[UNITY PROJECTS]/1NNOCENT-Revamp/Library/PackageCache/com.unity.cinemachine@2.7.2/Runtime/ThirdParty/clipper_library.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.15f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -664,82 +732,82 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.15f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
-      <HintPath>J:/GitHub/1NNOCENT Revamp/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+      <HintPath>C:/Users/Germano/Documents/[UNITY PROJECTS]/1NNOCENT-Revamp/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>J:/GitHub/1NNOCENT Revamp/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/Germano/Documents/[UNITY PROJECTS]/1NNOCENT-Revamp/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Cinemachine">
-      <HintPath>J:/GitHub/1NNOCENT Revamp/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+      <HintPath>C:/Users/Germano/Documents/[UNITY PROJECTS]/1NNOCENT-Revamp/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Shaders">
-      <HintPath>J:/GitHub/1NNOCENT Revamp/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+      <HintPath>C:/Users/Germano/Documents/[UNITY PROJECTS]/1NNOCENT-Revamp/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst">
-      <HintPath>J:/GitHub/1NNOCENT Revamp/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
+      <HintPath>C:/Users/Germano/Documents/[UNITY PROJECTS]/1NNOCENT-Revamp/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>J:/GitHub/1NNOCENT Revamp/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/Germano/Documents/[UNITY PROJECTS]/1NNOCENT-Revamp/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Editor">
-      <HintPath>J:/GitHub/1NNOCENT Revamp/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
+      <HintPath>C:/Users/Germano/Documents/[UNITY PROJECTS]/1NNOCENT-Revamp/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Editor">
-      <HintPath>J:/GitHub/1NNOCENT Revamp/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
+      <HintPath>C:/Users/Germano/Documents/[UNITY PROJECTS]/1NNOCENT-Revamp/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
-      <HintPath>J:/GitHub/1NNOCENT Revamp/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+      <HintPath>C:/Users/Germano/Documents/[UNITY PROJECTS]/1NNOCENT-Revamp/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>J:/GitHub/1NNOCENT Revamp/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/Germano/Documents/[UNITY PROJECTS]/1NNOCENT-Revamp/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Animation.Rigging">
-      <HintPath>J:/GitHub/1NNOCENT Revamp/Library/ScriptAssemblies/Unity.Animation.Rigging.dll</HintPath>
+      <HintPath>C:/Users/Germano/Documents/[UNITY PROJECTS]/1NNOCENT-Revamp/Library/ScriptAssemblies/Unity.Animation.Rigging.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Runtime">
-      <HintPath>J:/GitHub/1NNOCENT Revamp/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+      <HintPath>C:/Users/Germano/Documents/[UNITY PROJECTS]/1NNOCENT-Revamp/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Editor">
-      <HintPath>J:/GitHub/1NNOCENT Revamp/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+      <HintPath>C:/Users/Germano/Documents/[UNITY PROJECTS]/1NNOCENT-Revamp/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>J:/GitHub/1NNOCENT Revamp/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/Germano/Documents/[UNITY PROJECTS]/1NNOCENT-Revamp/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>J:/GitHub/1NNOCENT Revamp/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/Germano/Documents/[UNITY PROJECTS]/1NNOCENT-Revamp/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>J:/GitHub/1NNOCENT Revamp/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/Germano/Documents/[UNITY PROJECTS]/1NNOCENT-Revamp/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>J:/GitHub/1NNOCENT Revamp/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/Germano/Documents/[UNITY PROJECTS]/1NNOCENT-Revamp/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
-      <HintPath>J:/GitHub/1NNOCENT Revamp/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+      <HintPath>C:/Users/Germano/Documents/[UNITY PROJECTS]/1NNOCENT-Revamp/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics">
-      <HintPath>J:/GitHub/1NNOCENT Revamp/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+      <HintPath>C:/Users/Germano/Documents/[UNITY PROJECTS]/1NNOCENT-Revamp/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Animation.Rigging.Editor">
-      <HintPath>J:/GitHub/1NNOCENT Revamp/Library/ScriptAssemblies/Unity.Animation.Rigging.Editor.dll</HintPath>
+      <HintPath>C:/Users/Germano/Documents/[UNITY PROJECTS]/1NNOCENT-Revamp/Library/ScriptAssemblies/Unity.Animation.Rigging.Editor.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>J:/GitHub/1NNOCENT Revamp/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+      <HintPath>C:/Users/Germano/Documents/[UNITY PROJECTS]/1NNOCENT-Revamp/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ShaderGraph.Editor">
-      <HintPath>J:/GitHub/1NNOCENT Revamp/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
+      <HintPath>C:/Users/Germano/Documents/[UNITY PROJECTS]/1NNOCENT-Revamp/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics.Editor">
-      <HintPath>J:/GitHub/1NNOCENT Revamp/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+      <HintPath>C:/Users/Germano/Documents/[UNITY PROJECTS]/1NNOCENT-Revamp/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
-      <HintPath>J:/GitHub/1NNOCENT Revamp/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+      <HintPath>C:/Users/Germano/Documents/[UNITY PROJECTS]/1NNOCENT-Revamp/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>J:/GitHub/1NNOCENT Revamp/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/Germano/Documents/[UNITY PROJECTS]/1NNOCENT-Revamp/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>J:/GitHub/1NNOCENT Revamp/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/Germano/Documents/[UNITY PROJECTS]/1NNOCENT-Revamp/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>
