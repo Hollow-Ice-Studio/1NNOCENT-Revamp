@@ -26,6 +26,7 @@ public class PortoesArenaActivador : MonoBehaviour
         if (coll.gameObject.tag == "Player")
         {
             SlideDoors(true);
+            GetComponent<Collider>().enabled = false;
         }
     }
 

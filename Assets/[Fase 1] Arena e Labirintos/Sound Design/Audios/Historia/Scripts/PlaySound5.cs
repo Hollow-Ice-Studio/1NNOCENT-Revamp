@@ -24,6 +24,7 @@ namespace innocent
                 this.PostNotification(Notification.HUD_WRITE, TextoDeSinalizacao);
                 firstStoryEnemy.SetActive(true);
                 nextAudioTrigger.SetActive(true);
+                GetComponent<Collider>().enabled = false;
             }
         }
     }

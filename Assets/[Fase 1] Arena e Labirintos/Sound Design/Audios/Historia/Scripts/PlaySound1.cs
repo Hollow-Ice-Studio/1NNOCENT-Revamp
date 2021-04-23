@@ -6,7 +6,7 @@ using UnityEngine;
 namespace innocent {
     public class PlaySound1 : MonoBehaviour
     {
-        public string TextoDeSinalizacao = "Vire a esquerda, pegue a arma";
+        public string TextoDeSinalizacao = "Vire a esquerda";
         void OnTriggerEnter(Collider coll)
         {
             if (coll.gameObject.tag == "Player")

@@ -8,6 +8,7 @@ namespace innocent
 {
     public class CutSceneDetector : MonoBehaviour
     {
+        [SerializeField] string TextoOpcionalDeSinalizacao = "";
         [SerializeField] PlayableAsset cutscene;
         private void OnTriggerEnter(Collider other)
         {
@@ -15,6 +16,10 @@ namespace innocent
             {
                 this.PostNotification(Notification.CUTSCENE_PLAY, cutscene);
                 Destroy(this,0.5f);
+                if(!string.IsNullOrEmpty(TextoOpcionalDeSinalizacao))
+                {
+                    this.PostNotification(Notification.HUD_WRITE, TextoOpcionalDeSinalizacao);
+                }
             }
         }
     }

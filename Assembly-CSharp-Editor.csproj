@@ -265,7 +265,7 @@
       <HintPath>C:/Users/Germano/Documents/[UNITY PROJECTS]/1NNOCENT-Revamp/Library/PackageCache/com.unity.cinemachine@2.7.2/Runtime/ThirdParty/clipper_library.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.NRefactory">
-      <HintPath>C:/Users/Germano/Documents/[UNITY PROJECTS]/1NNOCENT-Revamp/Library/PackageCache/com.unity.render-pipelines.core@7.3.1/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
+      <HintPath>C:/Users/Germano/Documents/[UNITY PROJECTS]/1NNOCENT-Revamp/Library/PackageCache/com.unity.render-pipelines.core@7.4.3/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>C:/Users/Germano/Documents/[UNITY PROJECTS]/1NNOCENT-Revamp/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>

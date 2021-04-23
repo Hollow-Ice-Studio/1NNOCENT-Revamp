@@ -16,12 +16,14 @@ namespace innocent
                 throw new MissingReferenceException("Verifique se há um prefab valido no caminho fornecido");
             Spawn();
         }
-
+        
         void Spawn()
         {
             GameObject enemyObj = Instantiate(enemyPrefab, transform.localPosition, transform.rotation);
             enemyObj.name = $"[Enemy] {name}";
-            enemyObj.layer = LayerMask.NameToLayer(ConfiguredLayers.ENEMY);
+            int layer = LayerMask.NameToLayer(ConfiguredLayers.ENEMY);
+            if (layer > 0 && layer < 31)
+                enemyObj.layer = layer;
         }
     }
 }
