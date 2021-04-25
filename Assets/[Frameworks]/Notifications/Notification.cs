@@ -5,6 +5,7 @@ namespace innocent
     public static class Notification
     {
         //HUD System
+        public const string HUD_SWITCH_MOVE_MODE = "HudSystemNotification.switchMoveMode";
         public const string HUD_WRITE = "HudSystemNotification.Write";
         public const string HUD_HURT = "HudSystemNotification.Hurt";
         public const string HUD_INSANITY = "HudSystemNotification.Insanity";

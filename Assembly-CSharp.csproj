@@ -112,6 +112,7 @@
     <Compile Include="Assets\[Adam]\Scripts\ThirdPersonAnimationController.cs" />
     <Compile Include="Assets\[Adam]\Scripts\ThirdPersonCameraController.cs" />
     <Compile Include="Assets\[Adam]\Scripts\ThirdPersonDamageController.cs" />
+    <Compile Include="Assets\[Cutscenes]\Vermelho ataca branco\VermelhoAtacaBrancoBehaviour.cs" />
     <Compile Include="Assets\[Fase 1] Arena e Labirintos\Blocagem\Animator e afins\Fechamento do portao da arena inicial\PortoesArenaActivador.cs" />
     <Compile Include="Assets\[Fase 1] Arena e Labirintos\Blocagem\Animator e afins\Paredes que se elevam no labirinto longo\AudioManagerPlayer.cs" />
     <Compile Include="Assets\[Fase 1] Arena e Labirintos\Blocagem\Animator e afins\Paredes que se elevam no labirinto longo\Paredes_Corredor.cs" />
@@ -162,6 +163,7 @@
     <Compile Include="Assets\[Game Controller]\Scripts\GameSystems\CutSceneSystem.cs" />
     <Compile Include="Assets\[Game Controller]\Scripts\GameSystems\HudDamageSystem.cs" />
     <Compile Include="Assets\[Game Controller]\Scripts\GameSystems\HudInsanitySystem.cs" />
+    <Compile Include="Assets\[Game Controller]\Scripts\GameSystems\HudMoveModeSystem.cs" />
     <Compile Include="Assets\[Game Controller]\Scripts\GameSystems\HudTextSystem.cs" />
     <Compile Include="Assets\[Game Controller]\Scripts\GameSystems\VictoryConditionSystem.cs" />
     <Compile Include="Assets\[Game Controller]\Scripts\LogExtensions.cs" />

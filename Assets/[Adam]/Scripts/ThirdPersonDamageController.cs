@@ -3,7 +3,6 @@ using TheLiquidFire.Notifications;
 
 namespace innocent
 {
-    [RequireComponent(typeof(Adam))]
     public class ThirdPersonDamageController : MonoBehaviour
     {
         [Header("Adicione uma referência")]
@@ -11,12 +10,12 @@ namespace innocent
         GameObject DyingModelPrefab;
         [Range(0,1000)]
         public float limiteVerticalDoMapa;
-        Adam adam;
-        
+        [Range(1, 100)]
+        public int LifeValue;
+
 
         void Start()
         {
-            adam = GetComponent<Adam>();
             if (DyingModelPrefab == null)
                 throw new System.Exception("Adicione uma prefab no script");
         }
@@ -29,12 +28,22 @@ namespace innocent
                 die();
             }
         }
+        private void OnControllerColliderHit(ControllerColliderHit hit)
+        {
+            if (hit.gameObject.tag == ConfiguredTags.ENEMY)
+            {
+                if (LifeValue <= 0)
+                    die();
+                else
+                    hurt();
+            }
+        }
 
-        void OnCollisionEnter(Collision collision)
+        private void OnCollisionEnter(Collision collision)
         {
             if (collision.gameObject.tag == ConfiguredTags.ENEMY)
             {
-                if (adam.LifeValue <= 0)
+                if (LifeValue <= 0)
                     die();
                 else
                     hurt();
@@ -43,7 +52,7 @@ namespace innocent
 
         void hurt()
         {
-            adam.LifeValue--;
+            LifeValue--;
             this.PostNotification(Notification.HUD_HURT);
         }
 
