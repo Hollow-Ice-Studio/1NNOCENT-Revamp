@@ -39,6 +39,9 @@ public class NavMeshAI : MonoBehaviour
                 Arrived = false;
                 Scout();
                 break;
+            case EnemyState.STAY:
+                Stay();
+                break;
             default:
                 break;
         }
@@ -60,6 +63,12 @@ public class NavMeshAI : MonoBehaviour
         {
             agent.SetDestination(destination.gameObject.transform.position);
         }
+    }
+
+    void Stay()
+    {
+        if (playerObj != null)
+            agent.SetDestination(agent.transform.position);
     }
 
     void Stalk()

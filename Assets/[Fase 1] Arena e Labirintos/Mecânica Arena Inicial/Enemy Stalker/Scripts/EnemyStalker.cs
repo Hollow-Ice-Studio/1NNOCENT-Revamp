@@ -8,7 +8,8 @@ public enum EnemyState
 {
     FIND_WEAPON,
     SCOUT,
-    STALK
+    STALK,
+    STAY
 }
 public class EnemyStalker : MonoBehaviour
 {
@@ -19,28 +20,29 @@ public class EnemyStalker : MonoBehaviour
     [Tooltip("Área do mapa em que o inimigo surge")]
     [SerializeField] private MapSection mapSection;
     private NavMeshAI navMeshAI;
-    private EnemyStalkerAnimatorStateSwitcher animatorController;
+    private EnemyStalkerAnimatorStateSwitcher animatorSwitcher;
     public EnemyWeaponAtHand enemyWeapon;
     private ArenaCollider arenaCollider;
     private GameObject playerObj;
     [SerializeField] private EnemyState currentState;
     public EnemyState CurrentState { get { return currentState; } }
-
+    private float distanceToStay;
 
     [SerializeField] private List<Weapon> availableWeapons;
     public List<Weapon> AvailableWeapons { get { return availableWeapons; } }
     private void Awake()
     {
+        distanceToStay = Random.Range(6, 10);
         CheckComponents();
         navMeshAI.PlayerObj = playerObj;
         navMeshAI.Owner = this;
-        animatorController.Owner = this;
+        animatorSwitcher.Owner = this;
     }
 
     void CheckComponents()
     {
-        animatorController = GetComponentInChildren<EnemyStalkerAnimatorStateSwitcher>();
-        if (animatorController == null)
+        animatorSwitcher = GetComponentInChildren<EnemyStalkerAnimatorStateSwitcher>();
+        if (animatorSwitcher == null)
             throw new MissingComponentException("Adicione um EnemyStalkerAnimatorController como componente deste objeto");
 
         navMeshAI = GetComponentInChildren<NavMeshAI>();
@@ -90,18 +92,30 @@ public class EnemyStalker : MonoBehaviour
 
     private void EvaluateActions()
     {
-        if (enemyWeapon.CurrentWeapon == null && availableWeapons.Count > 0)
+
+        if(Vector3.Distance(playerObj.transform.position, transform.position) < distanceToStay && enemyWeapon.CurrentWeapon != null)
         {
-            UpdateState(EnemyState.FIND_WEAPON);
+            animatorSwitcher.SetMoviment(false);
+            UpdateState(EnemyState.STAY);
             return;
         }
 
-        if (arenaCollider.PlayerOnTheRange)
+        
+        if (enemyWeapon.CurrentWeapon == null && availableWeapons.Count > 0)
         {
+            animatorSwitcher.SetMoviment(true);
+            UpdateState(EnemyState.FIND_WEAPON);
+            return;
+        }
+        
+        if (arenaCollider.PlayerOnTheRange) 
+        {
+            animatorSwitcher.SetMoviment(true);
             UpdateState(EnemyState.STALK);
             return;
         }
 
+        animatorSwitcher.SetMoviment(false);
         UpdateState(EnemyState.SCOUT);
         return;
     }

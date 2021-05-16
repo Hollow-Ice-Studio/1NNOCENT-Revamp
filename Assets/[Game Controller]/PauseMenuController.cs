@@ -59,7 +59,9 @@ namespace innocent {
         }
         public void returnToMainMenu()
         {
-            UnPause();
+            Time.timeScale = 1;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
             SceneManager.LoadScene(MainMenuSceneName);
         }
         public void PlayInteractionSound()

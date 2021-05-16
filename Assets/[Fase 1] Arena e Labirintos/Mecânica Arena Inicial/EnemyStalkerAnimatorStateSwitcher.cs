@@ -13,6 +13,10 @@ public class EnemyStalkerAnimatorStateSwitcher : MonoBehaviour
     void FixedUpdate()
         => ChangeEnemyAnimationState();
 
+    public void SetMoviment(bool isMoving)
+    {
+        animator.SetBool("isMoving", isMoving);
+    }
     void ChangeEnemyAnimationState()
     {
         if (Owner != null && Owner.CurrentState == EnemyState.FIND_WEAPON)
