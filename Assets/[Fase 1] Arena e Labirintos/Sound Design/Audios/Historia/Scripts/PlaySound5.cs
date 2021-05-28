@@ -7,6 +7,7 @@ namespace innocent
 {
     public class PlaySound5 : MonoBehaviour
     {
+        public bool activated = false;
         public string TextoDeSinalizacao = "Esta é uma K41N. Te ajudará a se proteger.";
         [SerializeField]
         GameObject firstStoryEnemy, nextAudioTrigger;
@@ -17,9 +18,9 @@ namespace innocent
         }
         void OnTriggerEnter(Collider coll)
         {
-
-            if (coll.gameObject.tag == "Player")
+            if (coll.gameObject.tag == "Player"&&!activated)
             {
+                activated = true;
                 FindObjectOfType<AudioManager>().Play("Pegar Arma");
                 this.PostNotification(Notification.HUD_WRITE, TextoDeSinalizacao);
                 firstStoryEnemy.SetActive(true);

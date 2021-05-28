@@ -21,12 +21,12 @@ namespace innocent
 
         private void OnTriggerEnter(Collider collider)
         {
-            if (collider.gameObject.tag == "Player")
+            if (collider.CompareTag("Player"))
             {
                 Perigo();
-                if (collider.GetComponent<Animator>().GetBool("isRunning"))
+                if (collider.GetComponent<Animator>().GetBool("isSprinting"))
                     Ativar();
-                this.LogWithColor(collider.GetComponent<Animator>().GetBool("isRunning"), "cyan");
+                this.LogWithColor(collider.GetComponent<Animator>().GetBool("isSprinting"), "cyan");
             }
         }
 

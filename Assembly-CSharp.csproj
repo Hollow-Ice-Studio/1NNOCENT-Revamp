@@ -102,6 +102,7 @@
     <Compile Include="Assets\WeaponAnimationEvents.cs" />
     <Compile Include="Assets\WeaponPickup.cs" />
     <Compile Include="Assets\WeaponRecoil.cs" />
+    <Compile Include="Assets\[Adam]\BugDaArmaNaCinturaWorkaround.cs" />
     <Compile Include="Assets\[Adam]\Prefabs\Adam morrendo\ResetScene.cs" />
     <Compile Include="Assets\[Adam]\Scripts\Adam.cs" />
     <Compile Include="Assets\[Adam]\Scripts\AdamAnimationController.cs" />
@@ -118,6 +119,7 @@
     <Compile Include="Assets\[Fase 1] Arena e Labirintos\Blocagem\Animator e afins\Paredes que se elevam no labirinto longo\Paredes_Corredor.cs" />
     <Compile Include="Assets\[Fase 1] Arena e Labirintos\Blocagem\Animator e afins\Paredes que se elevam no labirinto longo\Portas_Corredor.cs" />
     <Compile Include="Assets\[Fase 1] Arena e Labirintos\Blocagem\Armadilha de espinho\DetectorEspinhos.cs" />
+    <Compile Include="Assets\[Fase 1] Arena e Labirintos\CheckPointer.cs" />
     <Compile Include="Assets\[Fase 1] Arena e Labirintos\CutSceneDetector.cs" />
     <Compile Include="Assets\[Fase 1] Arena e Labirintos\Mecânica Arena Inicial\Bullet.cs" />
     <Compile Include="Assets\[Fase 1] Arena e Labirintos\Mecânica Arena Inicial\DetectionZone.cs" />

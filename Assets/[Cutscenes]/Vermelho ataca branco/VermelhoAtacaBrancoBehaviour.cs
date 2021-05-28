@@ -7,11 +7,13 @@ namespace innocent
 {
     public class VermelhoAtacaBrancoBehaviour : MonoBehaviour
     {
+        public bool activated=false;
         [SerializeField] PlayableDirector timelineDirector;
         private void OnTriggerEnter(Collider other)
         {
-            if(other.tag == "Player")
+            if(other.tag == "Player" && !activated)
             {
+                activated = true;
                 timelineDirector.Play();
             }
         }

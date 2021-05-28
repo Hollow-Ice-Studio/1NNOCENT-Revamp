@@ -12,7 +12,7 @@ namespace innocent {
         [SerializeField] AudioSource interactionAudioSource;
         void Update()
         {
-            if (Input.GetKeyDown(Key))
+            if (Input.GetKeyDown(Key) || Input.GetKeyDown(KeyCode.Escape))
             {
                 if (Time.timeScale > 0)
                     Pause();
@@ -54,11 +54,13 @@ namespace innocent {
         }
         public void restartScene()
         {
+            PlayerPrefs.DeleteAll();
             UnPause();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         public void returnToMainMenu()
         {
+            PlayerPrefs.DeleteAll();
             Time.timeScale = 1;
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
