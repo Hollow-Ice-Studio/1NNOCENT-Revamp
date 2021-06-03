@@ -136,7 +136,9 @@
     <Compile Include="Assets\[Fase 1] Arena e Labirintos\Mecânica Arena Inicial\Weapon\EnemyGun.cs" />
     <Compile Include="Assets\[Fase 1] Arena e Labirintos\Mecânica Arena Inicial\Weapon\IWeapon.cs" />
     <Compile Include="Assets\[Fase 1] Arena e Labirintos\Mecânica Arena Inicial\Weapon\Weapon.cs" />
+    <Compile Include="Assets\[Fase 1] Arena e Labirintos\Sound Design\Audios\Historia\Scripts\AtivamentoPrimeiroInimigo.cs" />
     <Compile Include="Assets\[Fase 1] Arena e Labirintos\Sound Design\Audios\Historia\Scripts\PlayAudioManagerSound.cs" />
+    <Compile Include="Assets\[Fase 1] Arena e Labirintos\Sound Design\Audios\Historia\Scripts\PlaySound.cs" />
     <Compile Include="Assets\[Fase 1] Arena e Labirintos\Sound Design\Audios\Historia\Scripts\PlaySound1.cs" />
     <Compile Include="Assets\[Fase 1] Arena e Labirintos\Sound Design\Audios\Historia\Scripts\PlaySound2.cs" />
     <Compile Include="Assets\[Fase 1] Arena e Labirintos\Sound Design\Audios\Historia\Scripts\PlaySound3.cs" />

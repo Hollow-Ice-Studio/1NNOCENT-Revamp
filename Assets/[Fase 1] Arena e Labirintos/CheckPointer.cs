@@ -13,9 +13,9 @@ public class CheckPointer : MonoBehaviour
     void Start()
     {
         AdamTransform.position = new Vector3(
-            PlayerPrefs.GetFloat("x", 60),
-            PlayerPrefs.GetFloat("y", 1),
-            PlayerPrefs.GetFloat("z", 235)
+            PlayerPrefs.GetFloat("x", AdamTransform.position.x),//60
+            PlayerPrefs.GetFloat("y", AdamTransform.position.y),//1
+            PlayerPrefs.GetFloat("z", AdamTransform.position.z)//235
             );
     }
 

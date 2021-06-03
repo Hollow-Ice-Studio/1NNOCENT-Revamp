@@ -7,15 +7,18 @@ namespace innocent
 {
     public class PlaySound2 : MonoBehaviour
     {
-        public bool activated=false;
+        public bool isActivated=false;
         public string TextoDeSinalizacao = "Caminho limpo! Vá em frente.";
+        public GameObject positionMark;
         void OnTriggerEnter(Collider coll)
         {
-            if (coll.gameObject.tag == "Player"&&!activated)
+            if (coll.gameObject.tag == "Player" && !isActivated)
             {
-                activated = true;
                 FindObjectOfType<AudioManager>().Play("Controle do Labirinto");
                 this.PostNotification(Notification.HUD_WRITE, TextoDeSinalizacao);
+                isActivated = true;
+                if (positionMark)
+                    Destroy(positionMark);
             }
         }
     }
