@@ -7,7 +7,7 @@ public class CheckPointer : MonoBehaviour
     [SerializeField]
     Transform AdamTransform;
     [SerializeField]
-    Animation animationHint;
+    Animator animationHint;
     public bool activated = false;
     // Start is called before the first frame update
     void Start()
@@ -23,12 +23,12 @@ public class CheckPointer : MonoBehaviour
     {
         if (other.CompareTag("Player")&& !activated)
         {
+            animationHint.SetTrigger("play");
             activated = true;
             PlayerPrefs.SetFloat("x",other.transform.position.x);
             PlayerPrefs.SetFloat("y",other.transform.position.y);
             PlayerPrefs.SetFloat("z",other.transform.position.z);
             PlayerPrefs.Save();
-            animationHint.Play();
         }
     }
 }

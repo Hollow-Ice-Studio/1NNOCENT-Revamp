@@ -67,6 +67,7 @@
     <Compile Include="Assets\CharacterAiming.cs" />
     <Compile Include="Assets\CharacterLocomotion.cs" />
     <Compile Include="Assets\CrosshairTarget.cs" />
+    <Compile Include="Assets\PlayAnimationOnTrigger.cs" />
     <Compile Include="Assets\PrimeiroInimigoQueMorreBehaviour.cs" />
     <Compile Include="Assets\RaycastWeapon.cs" />
     <Compile Include="Assets\ReloadWeapon.cs" />

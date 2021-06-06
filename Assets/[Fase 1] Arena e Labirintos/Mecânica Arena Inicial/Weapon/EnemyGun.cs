@@ -6,7 +6,7 @@ public class EnemyGun : Weapon
 {
     const string PREFAB_PATH = "Prefabs/Bullet/Bullet Prefab";
     bool isRunning;
-    IEnumerator coroutine;
+    public IEnumerator coroutine;
 
     public override void Attack(GameObject targetObj)
     {
@@ -15,7 +15,6 @@ public class EnemyGun : Weapon
             coroutine = AttackRoutine(targetObj);
             StartCoroutine(coroutine);
         }
-
     }
 
     IEnumerator AttackRoutine(GameObject targetObj)
@@ -27,7 +26,9 @@ public class EnemyGun : Weapon
 
         if (targetObj != null)
         {
-            audioSource.Play();
+            if (audioSource)
+                audioSource.Play();
+            
             BuildProjectile(targetObj);
         }
     }

@@ -24,7 +24,6 @@ public class TurretBehaviour : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Turret enter");
         if(other.tag == "Player")
         {
             playerReference = other.transform;
@@ -51,7 +50,8 @@ public class TurretBehaviour : MonoBehaviour
     {
         while (true)
         {
-            Instantiate(enemyBullet, transform.parent.parent.position + transform.parent.parent.forward, transform.parent.parent.rotation, null);
+            if(enemyBullet)
+                Instantiate(enemyBullet, transform.parent.parent.position + (transform.parent.parent.forward*1.5f), transform.parent.parent.rotation, null);
             audioSource.Play();
             yield return new WaitForSeconds(waitTime);
         }

@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace innocent {
     public class PauseMenuController : MonoBehaviour
     {
-        [SerializeField] GameObject PauseHud, ConfirmRestartHud, ConfirmReturnMainScreenHud;
+        [SerializeField] GameObject PauseHud, ConfirmRestartHud, ConfirmReturnMainScreenHud, ConfigHud;
         [SerializeField] KeyCode Key = KeyCode.P;
         [SerializeField] string MainMenuSceneName = "MainScreen";
         [SerializeField] AudioSource interactionAudioSource;
@@ -36,6 +37,14 @@ namespace innocent {
             Cursor.lockState = CursorLockMode.Locked;
             PauseHud.SetActive(false);
         }
+        public void setConfigHUD(bool isActive)
+        {
+            ConfigHud.SetActive(isActive);
+        }
+        public void SetAudioListenerVolume(Scrollbar scrollbar)
+        {
+            AudioListener.volume = scrollbar.value;
+        }
         public void tryRestartScene()
         {
             ConfirmRestartHud.SetActive(true);
@@ -55,6 +64,11 @@ namespace innocent {
         public void restartScene()
         {
             PlayerPrefs.DeleteAll();
+            UnPause();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        public void restartLastCheckPoint()
+        {
             UnPause();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
